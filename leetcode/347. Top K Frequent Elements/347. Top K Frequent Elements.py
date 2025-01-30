@@ -23,13 +23,15 @@ class Solution:
         hashmap = {} #(num: count)
         freq_lst = [[] for i in range(len(nums) + 1)] #(freq: list of num)
 
+        #hashmap for sort (num: freq)
         for n in nums:
             hashmap[n] = hashmap.get(n,0) + 1
 
+        #bucket sort w list of list: indexes representing freq and num in each bucket that coorelates
         for n, c in hashmap.items():
             freq_lst[c].append(n)
 
-
+        #go through bucket sort list backwards (for max)
         for i in range(len(freq_lst) - 1, 0, -1):
             for n in freq_lst[i]:
                 return_lst.append(n)
@@ -46,7 +48,7 @@ class Solution:
 if __name__ == "__main__":
     lst = [1,1,1,2,2,3]
     k = 2
-    # test = Solution().topKFrequent(lst, k)
+    test = Solution().topKFrequent(lst, k)
     test2 = Solution().topKFrequent2(lst, k)
-    # print(test)
+    print(test)
     print(test2)
