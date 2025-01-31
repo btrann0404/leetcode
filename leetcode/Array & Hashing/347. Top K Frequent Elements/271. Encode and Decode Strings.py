@@ -1,3 +1,5 @@
+#Prefix based encoding using length and "#" as the unique val and key
+#O(n) Time and Space Complexity because it only runs through a linear search and insert in n complexity
 class Solution:
 
     def encode(self, strs: list[str]) -> str:
