@@ -2,7 +2,7 @@
 #Solution 1 Complexity: Time -> O(n) because every value is ran once, Space -> because of the set worst case it would O(n)
 #Solution 2 Complexity: Time -> O(n^2) because of slicing and loop together, Space -> O(n) because of implict slicing worst case
 class Solution:
-    #alternative solution
+    #alternative and more optimal solution
     def lengthOfLongestSubstring(self, s: str) -> int:
         #intialize set of unique subset
         charSet = set()
