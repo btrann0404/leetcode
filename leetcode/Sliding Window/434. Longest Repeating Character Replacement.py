@@ -16,6 +16,7 @@ class Solution:
 
             # if current valid length - highest freq char > k (substring isn't valid)
             # then move pointer and left and decrement from the hashmap
+            # aka make the window smaller
             while right - left + 1 - max(count.values()) > k:
                 count[s[left]] -= 1
                 left+=1
